@@ -1,4 +1,5 @@
 
+
 CalculatorAppOpened=True
 while CalculatorAppOpened:
 	try:
@@ -65,7 +66,7 @@ while CalculatorAppOpened:
 					print(bin(int(a)))
 					print(bin(int(b)))
 	except KeyboardInterrupt:
+		import os
+		os.system('clear')
 		CalculatorAppOpened=False
-					
-					
-					
+		pass								

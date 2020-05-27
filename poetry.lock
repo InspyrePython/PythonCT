@@ -1,14 +1,65 @@
 [[package]]
 category = "main"
+description = "ASCII Art Library For Python"
+name = "art"
+optional = false
+python-versions = ">=2.7"
+version = "4.7"
+
+[[package]]
+category = "main"
+description = "Screen-scraping library"
+name = "beautifulsoup4"
+optional = false
+python-versions = "*"
+version = "4.9.1"
+
+[package.dependencies]
+soupsieve = [">1.2", "<2.0"]
+
+[[package]]
+category = "main"
 description = "Cross-platform colored terminal text."
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "0.4.3"
 
+[[package]]
+category = "main"
+description = "Read single characters and key-strokes"
+name = "getkey"
+optional = false
+python-versions = "*"
+version = "0.6.5"
+
+[[package]]
+category = "main"
+description = "Python bindings to the Google search engine."
+name = "google"
+optional = false
+python-versions = "*"
+version = "2.0.3"
+
+[package.dependencies]
+beautifulsoup4 = "*"
+
+[[package]]
+category = "main"
+description = "A modern CSS selector implementation for Beautiful Soup."
+name = "soupsieve"
+optional = false
+python-versions = "*"
+version = "1.9.6"
+
 [metadata]
-content-hash = "062a0032e6316976ae0f88376d34ebaab1b09fe688eeacf4a592deeae636e793"
+content-hash = "a69a706cf7e50d2c5247d3d8db2f08a101e120ed7481c2c27f5e95e2b4908957"
 python-versions = "^3.7"
 
 [metadata.hashes]
+art = ["3ce62271dee7b6c2a058f8295ddf7c32035477400a83830781ef91e704488910", "8d02f8183d51c0879776cf8c9ff23335de0ea6033f23a174b2e18b102548a804"]
+beautifulsoup4 = ["73cc4d115b96f79c7d77c1c7f7a0a8d4c57860d1041df407dd1aae7f07a77fd7", "a6237df3c32ccfaee4fd201c8f5f9d9df619b93121d01353a64a73ce8c6ef9a8", "e718f2342e2e099b640a34ab782407b7b676f47ee272d6739e60b8ea23829f2c"]
 colorama = ["7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff", "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"]
+getkey = ["68c7c702c3b34deacf427f6c0f1fd66c5c2aa12d7801aa32442fc1a71c8ce059"]
+google = ["c03517e6f9eec7a03c07b864f9a64384fd4bc1efce9034d42e3f90addc9fe4ee", "ff7d997dbf33be666ed5deb8c5abf5d103c27ec199559b6d994923469e26bb48"]
+soupsieve = ["7985bacc98c34923a439967c1a602dc4f1e15f923b6fcf02344184f86cc7efaa", "feb1e937fa26a69e08436aad4a9037cd7e1d4c7212909502ba30701247ff8abd"]

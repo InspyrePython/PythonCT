@@ -20,7 +20,7 @@ while InspyreAppOpened:
 		def expon(num1, power): #Exponents
 			answer=num1 ** power
 			return(answer)
-		def randombetween(range1, range2, exclude, modi): #Random number between range1 and range2
+		def randombetween(range1, range2, exclude=0, modi=0): #Random number between range1 and range2
 			from random import randint
 			answer=randint(range1, range2)
 			answer=answer-modi
@@ -308,12 +308,15 @@ while InspyreAppOpened:
 					self.contents.remove(thing)
 			def getposts(self):
 				return self.contents
-		from colorama import Fore, Back, Style
-		print(Style.RESET_ALL, ' ')
+		from colorama import Style
+		import time
 		code = input('Code Window: ')
 		exec(compile(code, code, 'exec'))
+		print(Style.RESET_ALL, '')
+		time.sleep(3)
+		import os
+		os.system('clear')
 	#Start of Error Catching System: AKA. EOS
-
 	except TabError:
 		pass
 	except IndentationError:
@@ -346,4 +349,6 @@ while InspyreAppOpened:
 		pass
 	except KeyboardInterrupt:
 		InspyreAppOpened=False
-		print('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+		import os
+		os.system('clear')
+		pass

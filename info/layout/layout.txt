@@ -1,5 +1,0 @@
-Time:
----------------------------------------------------
-Apps:
-[T] Timer App
-[/] Open Command Terminal
