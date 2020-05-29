@@ -13,5 +13,4 @@ colorama = "^0.4.3"
 python = "^3.7"
 art = "^4.7"
 getkey = "^0.6.5"
-google = "^2.0"
 [tool.poetry.dev-dependencies]

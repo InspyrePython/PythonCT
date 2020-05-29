@@ -31,20 +31,18 @@ while True:
 		print(colorama.Style.RESET_ALL, ' ')
 	else:
 		pass
-	print(f'{time1}{hour}{time2}                        Version: Alpha 1.1.3')
+	print(f'{time1}{hour}{time2}                        Version: Alpha 1.2.5')
 	print('----------------------------------------------------------------------------------')
 	print('Apps: ')
 	print('⏲️  [T] Timer App')
 	print('🖥️  [D] Open Dev Tools')
 	print('🎮  [G] Game Hub')
 	print('💡  [!] See new update info')
-	print('ℹ️  [?] Help\n')
-	print('======Task Manager======')
+	print(' ℹ️  [?] Help\n')
 	print('⬆️  [U] Update Console')
 	print('📟  [/] Open Command Terminal')
 	print('⚙️  [%] Settings')
 	print('💻  [S] Shutdown\n')
-	print('======Stats======')
 	print(f'Storage: {storage}P')
 	signal = os.cpu_count()
 	if signal == 1:
@@ -84,6 +82,11 @@ while True:
 			pass
 	elif app == '/':
 		import commandterm
+		try:
+			time.sleep(10)
+			os.system('clear')
+		except KeyboardInterrupt:
+			os.system('clear')
 	elif app == 'U':
 		clear()
 	elif app == '?':

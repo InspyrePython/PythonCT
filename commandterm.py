@@ -7,6 +7,8 @@ clear()
 print('================PyOS Command Terminal=================')
 command = input('--PyOS user ')
 if command == 'install python3 inspyre':
+	f = open('packer.pyosl.txt', 'a')
+	f.write('[app]\n\t[lock]\n\t\t{inspyre: \n\t\t"state" = "coding"} [un-lock]\n\t [un-app]')
 	try:
 		clear()
 		import sys
@@ -18,7 +20,6 @@ if command == 'install python3 inspyre':
 			sys.stdout.write('[' + '#'*i + ' '*j + ']')
 			sys.stdout.write('\u001b[1000D')
 			sys.stdout.flush()
-	
 	except KeyboardInterrupt:
 		clear()
 		pass
