@@ -1,5 +1,4 @@
 
-
 #Importing standard modules
 from datetime import datetime
 import sys
@@ -38,7 +37,7 @@ while True:
 	print('🖥️  [D] Open Dev Tools')
 	print('🎮  [G] Game Hub')
 	print('💡  [!] See new update info')
-	print(' ℹ️  [?] Help\n')
+	print('ℹ️  [?] Help\n')
 	print('⬆️  [U] Update Console')
 	print('📟  [/] Open Command Terminal')
 	print('⚙️  [%] Settings')
@@ -66,6 +65,7 @@ while True:
 	elif app == 'G':
 		clear()
 		import gamehub
+		pass
 	elif app == 'D':
 		clear()
 		import devtools
@@ -174,8 +174,7 @@ while True:
 			os.system('clear')
 			pass
 		else:
-			print(colorama.Fore.RED, f'ConnectionError: PythonOS lost connection with PyGlobal network: {network} at time: {hour}{time2}')
-			break
+			raise ConnectionError(f'PythonOS lost connection with network: {network}.')
 	else:
 		try:
 			import time

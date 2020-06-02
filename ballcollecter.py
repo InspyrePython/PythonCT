@@ -3,7 +3,7 @@ import random
 balls=list()
 ownedballs=list()
 installs=['Not Installed', 'Not Installed']
-f = open('games/balls.txt', 'r')
+f = open('balls.txt', 'r')
 for i in range(28):
 	balls.append(f.readline())
 while True:

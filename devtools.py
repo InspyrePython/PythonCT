@@ -7,7 +7,7 @@ while devtools:
 		print('Welcome to PythonOS Dev Edition.')
 		print('Apps: ')
 		print('[I] Open PythonOS\' code editor.')
-		print('🖩[C] Calculator App.')
+		print('🖩 [C] Calculator App.')
 		print('[G] Gmail Sender')
 		print('Get PythonOS for your team:' +  Fore.BLUE, 'https://docs.google.com/forms/d/e/1FAIpQLScC1Y2yw58kS0RPRXnDL130Gq6sZQqOUI92JoHlzWqYGc9Htw/viewform')
 		print(Style.RESET_ALL, ' ')
