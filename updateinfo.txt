@@ -3,5 +3,5 @@
 Bug fixes made
 Added Help Center
 Renamed to "PythonOS" because I want to.
-Version Alpha 1.0
+Version Alpha 1.2.5
 PythonOS

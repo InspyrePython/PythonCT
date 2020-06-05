@@ -1,5 +1,21 @@
 
-#Importing standard modules
+def play(filename, fortime):
+	import replit
+	music = replit.audio.play(filename)
+	playing = True
+	while playing:
+		try:
+			import time
+			music.paused = False
+			time.sleep(fortime)
+			music.paused = True
+			playing = False
+		except replit.json.decoder.JSONDecodeError:
+			pass
+		except BrokenPipeError:
+			pass
+		except replit.NoSuchPlayerException:
+			pass
 from datetime import datetime
 import sys
 import art
@@ -7,6 +23,8 @@ import os
 import time
 import colorama
 import getkey
+import system
+play('oxp.wav', 3)
 appsopened=list()
 storage = int(os.path.getsize('ballcollecter.py')) + int(os.path.getsize('calculator.py')) + int(os.path.getsize('commandterm.py')) + int(os.path.getsize('devtools.py')) + int(os.path.getsize('fightgame.py')) + int(os.path.getsize('gamehub.py')) + int(os.path.getsize('gmail.py')) + int(os.path.getsize('inspyre.py')) + int(os.path.getsize('timer.py')) + int(os.path.getsize('wordbomb.py')) + int(os.path.exists('main.py'))
 #Booting varibles
@@ -53,22 +71,23 @@ while True:
 	elif signal == 4:
 		print(colorama.Fore.GREEN, f'PyGlobal signal strength: ' + ')'*signal)
 	print(colorama.Fore.RESET, 'Press CTRL-C to exit an app.\n')
+
 	app = getkey.getkey().upper()
-	os.system('clear')
+	sys.stdout.flush()
 	#Boot apps
 	if app == 'T':
 		clear()
-		import timer
+		exec(open('timer.py', 'r').read())
 		storage += 0.02
 		appsopened.append('Timer 0.02P')
 		pass
 	elif app == 'G':
 		clear()
-		import gamehub
+		exec(open('gamehub.py', 'r').read())
 		pass
 	elif app == 'D':
 		clear()
-		import devtools
+		exec(open('devtools.py', 'r').read())
 		pass
 	elif app == '!':
 		clear()
@@ -81,11 +100,11 @@ while True:
 			clear()
 			pass
 	elif app == '/':
-		import commandterm
 		try:
-			time.sleep(10)
 			os.system('clear')
+			exec(open('commandterm.py', 'r').read())
 		except KeyboardInterrupt:
+			print(colorama.Fore.RESET, '')
 			os.system('clear')
 	elif app == 'U':
 		clear()
@@ -100,7 +119,7 @@ while True:
 			print('Type \'T\' to open the timer app.')
 			print('Do CTRL-C to exit an app.')
 			print('Follow me on Repl.it: @LoganSpong')
-			time.sleep(10)
+			time.sleep(1000)
 		except KeyboardInterrupt:
 			clear()
 			pass
@@ -184,5 +203,3 @@ while True:
 			clear()
 		except KeyboardInterrupt:
 			clear()
-			pass
-		

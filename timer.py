@@ -21,3 +21,4 @@ while TimerAppOpened:
 		TimerAppOpened=False
 		import os
 		os.system('clear')
+		pass

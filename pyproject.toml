@@ -9,8 +9,11 @@ description = "A console based OS with Linux like interface."
 name = "PythonOS"
 version = "0.1.0"
 [tool.poetry.dependencies]
-colorama = "^0.4.3"
-python = "^3.7"
 art = "^4.7"
+colorama = "^0.4.3"
+flask = "^1.1"
 getkey = "^0.6.5"
+python = "^3.8"
+bloodyterminal = "^4.0"
+replit = "^1.1"
 [tool.poetry.dev-dependencies]

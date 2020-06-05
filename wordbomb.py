@@ -24,11 +24,6 @@ def game():
 				print('Lives ' + str(lives))
 			if lives == 0 or lives < 0:
 				print('You lose!')
-				print(' \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ')
-				x=input('x')
-				if x=='y':
-					game()
-					break	
 			points+=1
 			point='               Points '
 			print(point + (str(points)))

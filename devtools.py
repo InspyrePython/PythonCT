@@ -15,15 +15,15 @@ while devtools:
 		if app == 'I':
 			import os
 			os.system('clear')
-			import inspyre
+			exec(open('inspyre.py', 'r').read())
 		elif app == 'C':
 			import os
 			os.system('clear')
-			import calculator
+			exec(open('calculator.py', 'r').read())
 		elif app == 'G':
 			import os
 			os.system('clear')
-			import gmail
+			exec(open('gmail.py', 'r').read())
 		else:
 			import os
 			os.system('clear')
